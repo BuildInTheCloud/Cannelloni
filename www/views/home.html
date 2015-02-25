@@ -1,0 +1,201 @@
+<div class="wrapper" ng-controller="HomeController">
+    <div class="parallax">
+        <div class="parallax-image">
+            <img src="assets/app/img/bg6.jpg">
+        </div>
+        <div class="motto">
+            <div class="org-label">Build In The Cloud</div>
+            <div><span style="text-transform: none;">IoT</span> Cannelloni</div>
+        </div>
+        <h3 class="motivation">IoT End-to-End Analysis, Implementation & Replication.</h3>
+        <!--<div class="sm-motivation">Recipes for your IoT pasta and creative sauce...</div>-->
+        <div class="sm-motivation">Recipes for your IoT pasta and creative sauce...</div>
+    </div>
+
+    <div class="section">
+        <div class="row center-block">
+            <div class="col-md-10 dom-center-block">
+                <div class="row center-block">
+                    <div class="col-md-4">
+                        <div class="info">
+                            <div class="icon icon-orange">
+                                <i class="fa fa-cog"></i>
+                            </div>
+                            <div class="description">
+                                <h3> Major Platforms </h3>
+                                <p>Arduino, Rasberry Pi, Intel Edison, etc.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="info">
+                            <div class="icon icon-green">
+                                <i class="fa fa-book"></i>
+                            </div>
+                            <div class="description">
+                                <h3> Complete Implementation </h3>
+                                <p>Prototype to end-product implementation</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="info">
+                            <div class="icon icon-purple">
+                                <i class="fa fa-square-o"></i>
+                            </div>
+                            <div class="description">
+                                <h3> Clear & Concise </h3>
+                                <p>Easy to follow and well documented</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container tim-container max-constraint">
+            <h1 class="text-center">
+                We give you recipe,<br>
+                you make heck of a cannelloni
+                <small class="subtitle">IoT is here! IoT is fresh! And IoT tastes really good!</small></h1>
+
+            <p>
+                We love IoT. And we think you'll to love it too. That's why we
+                put this site together, to provide aspiring IoT engineers & developers with concise, in-depth and replicable
+                step-by-step procedures to building IoT systems and prototypes we've spent sometime ourselves
+                researching and implementing.
+            </p>
+            <p>
+                What you get are clear, concise & meticulously-documented recipes to building fully functional IoT
+                systems, which are both practical and applicable to realistic scenarios - all open source, at no cost to you.
+            </p>
+            <p>
+                We spend a lot of time on our recipes to make sure they tell you just the right amount of sugar to add, or the exact type of
+                tomatoes to buy. One good thing about our recipes is that when you make it, you can rate it and tell us if we can add to, or remove from it.
+                It's cool. You can tell us when it's a little too salty, or a tad bit too sweet.
+            </p>
+        </div>
+        <div class="space-25"></div>
+    </div>
+</div>
+
+
+<div class="wrapper" ng-controller="LandingController">
+    <div class="section section-gray">
+        <div class="row center-block">
+            <div class="col-md-10 dom-center-block">
+                <div class="card">
+                    <div class="content text-center">
+                        <h4 class="title">Some of our recipes. Go on, take a look... <i class="fa fa-smile-o"></i></h4>
+                    </div>
+                </div> <!-- end card -->
+            </div>
+        </div>
+
+        <div class="row center-block">
+            <div class="col-md-10 dom-center-block">
+                <div class="row">
+                    <div class="col-md-4" ng-repeat="recipe in recipes">
+                        <div class="card">
+                            <div class="image">
+                                <img src="assets/app/img/blog_3.png" alt="..."/>
+                                <div class="filter">
+                                    <button type="button" class="btn btn-neutral btn-round">
+                                        <i class="fa fa-eye"></i> View Recipe
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="content">
+                                <!--<p class="category text-left">March 5, 2014</p>-->
+                                <p class="category text-right">
+                                    <i class="fa fa-star text-warning"></i> Featured
+                                </p>
+                                <p class="category">Category: <a href=""><strong>Intel Edison</strong></a></p>
+                                <a href="#">
+                                    <h4 class="title">Read Pressure Sensor and logging data to SD Card</h4>
+                                </a>
+                                <div class="footer">
+                                    <div class="author">
+                                        <a href="#">
+                                            <img src="assets/app/img/faces/face-5.jpg" alt="..." class="avatar">
+                                            <span> Mark Hebert</span>
+                                        </a>
+                                    </div>
+                                    <div class="stats pull-right">
+                                        <a href="#">
+                                            <i class="fa fa-comments"></i> 89
+                                        </a>
+                                    </div>
+                                    <div class="stats pull-right">
+                                        <a href="#">
+                                            <i class="fa fa-heart"></i> 341
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- end card -->
+                    <!--<div class="col-md-4" ng-repeat="recipe in recipes">
+                        <div class="card">
+                            <div class="image">
+                                <img src="assets/app/img/blog_2.png" alt="..."/>
+                                <div class="filter">
+                                    <button type="button" class="btn btn-neutral btn-simple">
+                                        <i class="fa fa-bookmark-o"></i> Bookmark
+                                    </button>
+                                    <button type="button" class="btn btn-neutral btn-simple">
+                                        <i class="fa fa-align-left"></i> Read article
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="content">
+                                <p class="category">Latest news</p>
+                                <a href="#">
+                                    <h4 class="title">Get Shit Done Kit PRO, the most wanted bootstrap kit is here </h4>
+                                </a>
+                                <div class="footer">
+                                    <div class="author">
+                                        <a href="#">
+                                            <i class="fa fa-female"></i> Elena Conacel
+                                        </a>
+                                    </div>
+                                    <div class="stats pull-right">
+                                        <i class="fa fa-clock-o"></i> 7 min read
+                                    </div>
+                                </div>
+                            </div>
+                        </div>--> <!-- end card -->
+                    </div>
+                    <!--<div class="col-md-4" ng-repeat="recipe in recipes">
+                        <div class="card card-background">
+                            <div class="image">
+                                <img src="assets/app/img/card-full-3.jpg" alt="..."/>
+                                <div class="filter"></div>
+                            </div>
+                            <div class="content text-center">
+                                <p class="category text-right">
+                                    <i class="fa fa-star"></i> Promo
+                                </p>
+                                <a href="#">
+                                    <h4 class="title">The next big thing in web development is here!</h4>
+                                </a>
+                            </div>
+                            <div class="footer">
+                                <div class="stats">
+                                    <a href="#">
+                                        <i class="fa fa-comment"></i> 68 comments
+                                    </a>
+                                </div>
+                                <div class="stats">
+                                    <a href="#">
+                                        <i class="fa fa-heart"></i> 221 likes
+                                    </a>
+                                </div>
+                            </div>
+                        </div>--> <!-- end card -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br /><br />
+    </div>
+</div>

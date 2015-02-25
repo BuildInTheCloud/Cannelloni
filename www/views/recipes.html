@@ -1,0 +1,45 @@
+﻿<div class="container" ng-controller="RecipeController">
+    <div class="space-50"></div>
+    <div class="space-50"></div>
+    <div class="row">
+        <div class="col-md-4" ng-repeat="recipe in recipes">
+            <div class="card card-background">
+                <div class="image">
+                    <img src="assets/app/img/card-full-3.jpg" alt="..."/>
+                    <div class="filter"></div>
+                </div>
+                <div class="content">
+                    <p class="category text-right">
+                        <i class="fa fa-star"></i> Promo
+                    </p>
+                    <a href="#">
+                        <h4 class="title">The next big thing in web development is here!</h4>
+                    </a>
+                </div>
+                <div class="footer">
+                    <div class="stats">
+                        <a href="#">
+                            <i class="fa fa-comment"></i> 68 comments
+                        </a>
+                    </div>
+                    <div class="stats">
+                        <a href="#">
+                            <i class="fa fa-heart"></i> 221 likes
+                        </a>
+                    </div>
+                </div>
+            </div> <!-- end card -->
+        </div>
+    </div>  
+    <br /><br />
+    <div class="row">
+        <div class="col-md-12">
+            <div class="text-center">
+                <button class="btn btn-round btn-info btn-lg btn-block btn-morphing" data-toggle="morphing" data-rotation-color="azure">More Books</button>
+            </div>
+        </div>
+    </div> 
+    <br /><br />     
+</div>
+
+<script src="assets/app/js/get-shit-done.js"></script>

@@ -1,0 +1,7 @@
+{
+  "dev" : {
+    "connectionString" : "mongodb://localhost/test"
+  },
+  "test" : {},
+  "prod" : {}
+}

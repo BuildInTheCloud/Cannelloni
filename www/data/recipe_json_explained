@@ -1,0 +1,45 @@
+(A) Steps property -  Feedback Hooks:
+-------------------------------------
+I don't even know if this possible. The general idea here is when one performs a step within the recipe, it would be nice to have some sort of means to get
+confirmation from the user performing the step beyond your typical 'Have you completed the step? Yes/No'.
+
+What if one of the steps were to setup an IO device, and then a feedback hook could be defined where the IO device send some input command to an
+event listener within the app?
+
+Or that they use the items in the current step to write to a text file, and the app detects when that happens, reads the file parses it and evaluates the text
+to see if it matches the valid response/requirements in that step for that recipe.
+
+This I imagine would be an optional setting they can toggle to allow for "Step Validation". They should be able to turn it off/on at any time during a recipe.
+
+Realistically, there'd be so much that can be done, but I think simple IO operations of server connections could be possible. Will need to mention it to
+the guys when I get a chance
+
+One thing we could do is develop IoT devices that we could provide to users, where that IoT devices sole purpose is to validate steps within a recipe. I
+can't assess the value of this idea now because no one knows what this field will turn into, but imagine if this recipe engine was transported to
+the culinary app, and one developed sensors to measure the temperature of water boiling in a step, to ensure that the right heat temperature is met for that step,
+ or some sort of peripheral that could measure depth of liquid within a bowl to ensure that the right quantity of milk is provided for the Alfredo sauce
+ recipe.
+
+ As long as users provide the criteria and requirements for every IoT recipe they create in a specific format, we could tie them into the above mentioned IoT
+ devices and have them validate steps within a recipe themselves, rather than have the user indicate when a step has been accomplished. An easy one to do
+ would be anything time based. We could start to explore that area and see how that could work.
+
+
+(B) General property - Estimated Monetary Cost
+----------------------------------------------
+We'll associate a price with every ingredient. This price against the quantity of all ingredients will roll up to this estimate.
+
+
+(C) General property - Author Recommendations
+----------------------------------------------
+Author recommendations are just general comments the author associates with a recipe to provide advice on ways to attempt making the recipe.
+
+
+(D) Cooking property - Step Validation
+----------------------------------------------
+This ties into feedback hooks from above. It's a toggle that allows you to turn on feedback hooks. You'll be able to turn it on/off for the whole recipe for for each step
+
+
+(E) Events property
+----------------------------------------------
+All the events that should happen for each step within the recipe.
