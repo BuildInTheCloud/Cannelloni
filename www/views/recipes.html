@@ -1,45 +1,83 @@
-﻿<div class="container" ng-controller="RecipeController">
-    <div class="space-50"></div>
-    <div class="space-50"></div>
-    <div class="row">
-        <div class="col-md-4" ng-repeat="recipe in recipes">
-            <div class="card card-background">
-                <div class="image">
-                    <img src="assets/app/img/card-full-3.jpg" alt="..."/>
-                    <div class="filter"></div>
-                </div>
-                <div class="content">
-                    <p class="category text-right">
-                        <i class="fa fa-star"></i> Promo
-                    </p>
-                    <a href="#">
-                        <h4 class="title">The next big thing in web development is here!</h4>
-                    </a>
-                </div>
-                <div class="footer">
-                    <div class="stats">
-                        <a href="#">
-                            <i class="fa fa-comment"></i> 68 comments
-                        </a>
+﻿<div class="wrapper  section section-gray" ng-controller="RecipeController">
+    <div class="container">
+        <div class="space-50"></div>
+        <div class="space-50"></div>
+        <div class="row">
+            <div class="col-md-12 dom-center-block">
+                <div class="card">
+                    <div class="content text-center">
+                        <div class="row">
+                            <div class="col-xs-2">
+                                <a href="">
+                                    <i class="fa fa-navicon fa-2x" style="margin-top:3px;"></i>
+                                </a>
+                            </div>
+                            <div class="col-xs-8">
+                                <h4 class="title">Recipes <i class="fa fa-newspaper-o fa-lg"></i></h4>
+                            </div>
+                            <div class="col-xs-2"></div>
+                        </div>
+
                     </div>
-                    <div class="stats">
-                        <a href="#">
-                            <i class="fa fa-heart"></i> 221 likes
-                        </a>
-                    </div>
-                </div>
-            </div> <!-- end card -->
-        </div>
-    </div>  
-    <br /><br />
-    <div class="row">
-        <div class="col-md-12">
-            <div class="text-center">
-                <button class="btn btn-round btn-info btn-lg btn-block btn-morphing" data-toggle="morphing" data-rotation-color="azure">More Books</button>
+                </div> <!-- end card -->
             </div>
         </div>
-    </div> 
-    <br /><br />     
+
+        <div class="space-50"></div>
+
+        <div class="row">
+            <div class="col-md-4" ng-repeat="recipe in recipes">
+                <div class="card">
+                    <div class="image">
+                        <img src="assets/app/img/blog_3.png" alt="..."/>
+                        <div class="filter">
+                            <button type="button" class="btn btn-neutral btn-round">
+                                <i class="fa fa-eye"></i> View Recipe
+                            </button>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <!--<p class="category text-left">March 5, 2014</p>-->
+                        <p class="category text-right">
+                            <i class="fa fa-star text-warning"></i> Featured
+                        </p>
+                        <p class="category">Category: <a href=""><strong>Intel Edison</strong></a></p>
+                        <a href="#">
+                            <h4 class="title">Read Pressure Sensor and logging data to SD Card</h4>
+                        </a>
+                        <div class="footer">
+                            <div class="author">
+                                <a href="#">
+                                    <img src="assets/app/img/faces/face-5.jpg" alt="..." class="avatar">
+                                    <span> Mark Hebert</span>
+                                </a>
+                            </div>
+                            <div class="stats pull-right">
+                                <a href="#">
+                                    <i class="fa fa-comments"></i> 89
+                                </a>
+                            </div>
+                            <div class="stats pull-right">
+                                <a href="#">
+                                    <i class="fa fa-heart"></i> 341
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- end card -->
+        </div>
+        <br /><br />
+        <div class="row">
+            <div class="col-md-12">
+                <div class="text-center">
+                    <button class="btn btn-round btn-info btn-lg btn-block btn-fill btn-morphing" data-toggle="morphing" data-rotation-color="azure">More Recipes</button>
+                </div>
+            </div>
+        </div>
+        <br /><br />
+    </div>
 </div>
+
 
 <script src="assets/app/js/get-shit-done.js"></script>

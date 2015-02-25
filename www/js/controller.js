@@ -1,14 +1,18 @@
 ﻿
 angular.module('buildIoT')
-    
+    /*==========================================================================
+     Home Controller
+     ==========================================================================*/
     .controller('HomeController', ['$scope', '$http', function ($scope, $http) {
     }])
 
+    /*==========================================================================
+     Landing Page Controller
+     ==========================================================================*/
     .controller('LandingController', ['$scope', '$http', function ($scope, $http) {
         $scope.recipes = [];
         $scope.recipeCount = 6;
 
-
         $scope.init = function () {
             //Just for testing purposes for now
             for (var i = 0; i < $scope.recipeCount; i++) {
@@ -19,31 +23,60 @@ angular.module('buildIoT')
         $scope.init();
     }])
 
+    /*==========================================================================
+     Navbar Controller
+     ==========================================================================*/
     .controller('NavController', ['$scope', '$http', '$location', function ($scope, $http, $location) {
 
     }])
 
-    .controller('RecipeController', ['$scope', '$http', function ($scope, $http) {
+
+    /*==========================================================================
+     Recipes Controller
+     ==========================================================================*/
+    .controller('RecipeController', ['$scope', '$http', '$route', '$routeParams', function ($scope, $http, $route, $routeParams) {
         $scope.recipes = [];
+        $scope.recipe = {};
         $scope.recipeCount = 20;
 
+        $scope.getRecipe = function(id){
+        }
+
+        $scope.saveRecipe = function(){
+        }
 
         $scope.init = function () {
-            //Just for testing purposes for now
-            for (var i = 0; i < $scope.recipeCount; i++) {
-                $scope.recipes.push(i);
+            //check for route params
+            if($routeParams.id !== null && $routeParams.id !== undefined){
+                //Get recipe from api (just for testing now)
+            }
+            else{
+                //Get recipes from api (Just for testing purposes for now)
+                for (var i = 0; i < $scope.recipeCount; i++) {
+                    $scope.recipes.push(i);
+                }
             }
         }
 
         $scope.init();
     }])
 
+
+    /*==========================================================================
+     Settings Controller
+     ==========================================================================*/
     .controller('SettingsController', ['$scope', '$http', function ($scope, $http) {
     }])
 
+    /*==========================================================================
+     Content Settings Controller
+     ==========================================================================*/
     .controller('ContentSettingsController', ['$scope', '$http', function ($scope, $http) {
     }])
 
+    /*==========================================================================
+     Upload Controller
+     ==========================================================================*/
     .controller('UploadController', ['$scope', 'FileUploader', function ($scope, FileUploader) {
 
         var uploader = $scope.uploader = new FileUploader({

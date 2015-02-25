@@ -6,7 +6,8 @@
 var serverConfig = {
     devMode : true,
     dev : {
-        connectionString : "mongodb://localhost/Cannelloni"
+        connectionString : 'mongodb://localhost/Cannelloni',
+        apiUrl : ''
     },
     test : {},
     prod : {}

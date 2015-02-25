@@ -11,12 +11,17 @@ System.registerModule("../../../www/js/controller.js", [], function(require) {
       }
     };
     $scope.init();
-  }]).controller('NavController', ['$scope', '$http', '$location', function($scope, $http, $location) {}]).controller('RecipeController', ['$scope', '$http', function($scope, $http) {
+  }]).controller('NavController', ['$scope', '$http', '$location', function($scope, $http, $location) {}]).controller('RecipeController', ['$scope', '$http', '$route', '$routeParams', function($scope, $http, $route, $routeParams) {
     $scope.recipes = [];
+    $scope.recipe = {};
     $scope.recipeCount = 20;
+    $scope.getRecipe = function(id) {};
+    $scope.saveRecipe = function() {};
     $scope.init = function() {
-      for (var i = 0; i < $scope.recipeCount; i++) {
-        $scope.recipes.push(i);
+      if ($routeParams.id !== null && $routeParams.id !== undefined) {} else {
+        for (var i = 0; i < $scope.recipeCount; i++) {
+          $scope.recipes.push(i);
+        }
       }
     };
     $scope.init();

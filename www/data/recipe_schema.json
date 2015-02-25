@@ -1,0 +1,99 @@
+{
+  "general" : {
+    "id" : "",
+    "name": "",
+    "platform" : "",
+    "computer" : "",
+    "author" : "",
+    "authorUid" : "the author's Cannelloni uid",
+    "category" : "",
+    "images" : [
+      {
+        "data" : "(...base64 data here...)",
+        "name" : "",
+        "caption" : "",
+        "position" : "basically the order in which it is displayed. Could be used for scrolling carousels if applicable",
+        "dimensions" : {
+          "height" : "",
+          "width" : "",
+          "unit" : "pixels"
+        }
+      }
+    ],
+    "video" : [
+      {
+        "url" : ""
+      }
+    ],
+    "estimatedMonetaryCost" : "(estimated monetary cost based on the sum of the cost of all ingredients. Can be tied into an ecommerce app in future)",
+    "skillLevel" : "(skill level recommended)",
+    "difficulty" : "(easy, medium, hard, or some other scale we can use)",
+    "authorRecommendations" : "",
+    "tags" : [],
+    "createDate" : "",
+    "updateDate" : ""
+  },
+  "cooking" : {
+    "prep" : {
+      "time" : "",
+      "averageTime" : "average time overall it takes to cook this recipe across all users who have made this recipe "
+    },
+    "cook" : {
+      "time" : "",
+      "averageTime" : ""
+    },
+    "estimate" : {
+      "time" : ""
+    },
+    "stepValidation" : "false by default...see recipe explanation text file"
+  },
+  "ingredients" : [
+    {
+      "id" : "",
+      "position" : "basically the order in which it is listed.",
+      "localId" : "the id of the ingredient local to this recipe and unique across all other ingredients or all other duplicate instances in this same ingredient. This is based on Ryan's idea",
+      "name" : "",
+      "category" : "",
+      "quantity" : "the recipe flow engine should create copies of this ingredient with duplicate ids local to the recipe. Per Ryan Sever's ideas and suggestions, it will enable us to track state and conditions across multiple instances of an ingredient",
+      "unit" : "",
+      "condition" : "old/new/used/any/sliced/booted/os-loaded/etc",
+      "state" : "installed/loading/booting/bootstrapping/compiling/etc"
+    }
+  ],
+  "steps" : [
+    {
+      "id" : "",
+      "position" : "",
+      "title" : "",
+      "instructions" : "",
+      "event" : "",
+      "feedbackHooks" : [
+        {
+          "id" : ""
+        }
+      ]
+    }
+  ],
+  "events" : [
+    {
+      "id" : "",
+      "localId" : "",
+      "name" : "events will map to javascript functions (on the client or server) that will be triggered based on some external action. I think events should be tied to ingredients",
+      "type" : "time-based/user-driven/data-driven/system-driven",
+      "params" : [{}]
+    }
+  ],
+  "reviews" : [
+    {
+      "id" : "",
+      "title" : "",
+      "reviewer" : "Cannelloni uid",
+      "createDate" : "",
+      "updateDate" : "",
+      "rating" : "1 to 5",
+      "review" : "review content"
+    }
+  ],
+  "statistics" : {
+  }
+}

@@ -13,6 +13,9 @@ System.registerModule("../../www/app.js", [], function(require) {
     }).when('/recipes', {
       templateUrl: 'views/recipes.html',
       controller: 'RecipeController'
+    }).when('/recipes/:id', {
+      templateUrl: 'views/recipes.html',
+      controller: 'RecipeController'
     }).otherwise({redirectTo: '/home'});
   }).run(['$rootScope', function($rootScope) {
     $rootScope.navbar_class = '';

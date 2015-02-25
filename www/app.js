@@ -18,6 +18,7 @@ app.config(function ($routeProvider, $controllerProvider, $compileProvider, $fil
         .when('/home', {templateUrl: 'views/home.html', controller: 'HomeController'})
         .when('/upload', { templateUrl: 'views/upload.html', controller: 'UploadController' })
         .when('/recipes', { templateUrl: 'views/recipes.html', controller: 'RecipeController' })
+        .when('/recipes/:id', { templateUrl: 'views/recipes.html', controller: 'RecipeController' })
         .otherwise({ redirectTo: '/home' });
 })
 

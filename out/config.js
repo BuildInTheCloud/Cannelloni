@@ -4,7 +4,10 @@ System.registerModule("../config.js", [], function(require) {
   var __moduleName = "../config.js";
   var serverConfig = {
     devMode: true,
-    dev: {connectionString: "mongodb://localhost/Cannelloni"},
+    dev: {
+      connectionString: 'mongodb://localhost/Cannelloni',
+      apiUrl: ''
+    },
     test: {},
     prod: {}
   };
