@@ -2,7 +2,30 @@ $traceurRuntime.options.symbols = true;
 System.registerModule("../../../www/js/controller.js", [], function(require) {
   "use strict";
   var __moduleName = "../../../www/js/controller.js";
-  angular.module('buildIoT').controller('HomeController', ['$scope', '$http', function($scope, $http) {}]).controller('LandingController', ['$scope', '$http', function($scope, $http) {
+  angular.module('buildIoT').controller('AppController', ['$scope', '$http', function($scope, $http) {
+    $scope.loadScript = function(url, type, charset, override) {
+      if (type === undefined)
+        type = 'text/javascript';
+      if (url) {
+        var script = document.querySelector("script[src*='" + url + "']");
+        if (!script || override) {
+          var heads = document.getElementsByTagName("head");
+          if (heads && heads.length) {
+            var head = heads[0];
+            if (head) {
+              script = document.createElement('script');
+              script.setAttribute('src', url);
+              script.setAttribute('type', type);
+              if (charset)
+                script.setAttribute('charset', charset);
+              head.appendChild(script);
+            }
+          }
+        }
+        return script;
+      }
+    };
+  }]).controller('HomeController', ['$scope', '$http', function($scope, $http) {}]).controller('LandingController', ['$scope', '$http', function($scope, $http) {
     $scope.recipes = [];
     $scope.recipeCount = 6;
     $scope.init = function() {
@@ -16,12 +39,24 @@ System.registerModule("../../../www/js/controller.js", [], function(require) {
     $scope.recipe = {};
     $scope.recipeCount = 20;
     $scope.getRecipe = function(id) {};
+    $scope.newRecipe = function() {
+      $scope.isRecipe = false;
+      $scope.isRecipes = false;
+      $scope.isNewRecipe = true;
+      $scope.$parent.loadScript('assets/app/js/custom/can-recipes.js', 'text/javascript', null, true);
+    };
     $scope.saveRecipe = function() {};
     $scope.init = function() {
-      if ($routeParams.id !== null && $routeParams.id !== undefined) {} else {
+      $scope.isNewRecipe = false;
+      $scope.isRecipe = false;
+      $scope.isRecipes = false;
+      if ($routeParams.id !== null && $routeParams.id !== undefined) {
+        $scope.isRecipe = true;
+      } else {
         for (var i = 0; i < $scope.recipeCount; i++) {
           $scope.recipes.push(i);
         }
+        $scope.isRecipes = true;
       }
     };
     $scope.init();

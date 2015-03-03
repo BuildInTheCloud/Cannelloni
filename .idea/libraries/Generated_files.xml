@@ -2,15 +2,29 @@
   <library name="Generated files" type="javaScript">
     <properties>
       <sourceFilesUrls>
+        <item url="file://$PROJECT_DIR$/out/www/assets/app/js/cannelloni_demo.js" />
+        <item url="file://$PROJECT_DIR$/out/www/app.js" />
+        <item url="file://$PROJECT_DIR$/out/www/js/controller.js" />
         <item url="file://$PROJECT_DIR$/out/server.js" />
-        <item url="file://$PROJECT_DIR$/out/logic.js" />
         <item url="file://$PROJECT_DIR$/out/config.js" />
+        <item url="file://$PROJECT_DIR$/out/www/assets/app/js/custom/can-recipes.js" />
+        <item url="file://$PROJECT_DIR$/out/www/assets/app/js/cannelloni.js" />
+        <item url="file://$PROJECT_DIR$/out/www/assets/app/js/custom/can_recipes.js" />
+        <item url="file://$PROJECT_DIR$/out/www/assets/app/js/get-shit-done.js" />
+        <item url="file://$PROJECT_DIR$/out/logic.js" />
       </sourceFilesUrls>
     </properties>
     <CLASSES>
+      <root url="file://$PROJECT_DIR$/out/www/assets/app/js/cannelloni_demo.js" />
+      <root url="file://$PROJECT_DIR$/out/www/app.js" />
+      <root url="file://$PROJECT_DIR$/out/www/js/controller.js" />
       <root url="file://$PROJECT_DIR$/out/server.js" />
-      <root url="file://$PROJECT_DIR$/out/logic.js" />
       <root url="file://$PROJECT_DIR$/out/config.js" />
+      <root url="file://$PROJECT_DIR$/out/www/assets/app/js/cannelloni.js" />
+      <root url="file://$PROJECT_DIR$/out/www/assets/app/js/custom/can-recipes.js" />
+      <root url="file://$PROJECT_DIR$/out/www/assets/app/js/custom/can_recipes.js" />
+      <root url="file://$PROJECT_DIR$/out/logic.js" />
+      <root url="file://$PROJECT_DIR$/out/www/assets/app/js/get-shit-done.js" />
     </CLASSES>
     <SOURCES />
   </library>

@@ -3,7 +3,7 @@
     "id" : "",
     "name": "",
     "platform" : "",
-    "computer" : "",
+    "computer" : "might be the same as computer property",
     "author" : "",
     "authorUid" : "the author's Cannelloni uid",
     "category" : "",
@@ -26,9 +26,21 @@
       }
     ],
     "estimatedMonetaryCost" : "(estimated monetary cost based on the sum of the cost of all ingredients. Can be tied into an ecommerce app in future)",
+    "audience" : "",
     "skillLevel" : "(skill level recommended)",
     "difficulty" : "(easy, medium, hard, or some other scale we can use)",
-    "authorRecommendations" : "",
+    "prerequisites" : {
+      "generalText" : "",
+      "items" : [
+        {
+          "id" : "",
+          "name" : "",
+          "type" : "what type of prereq is it? Is it knowledge based? Equipment-based? Environment-based? Location-based? Syntax-based? etc.",
+          "description" : ""
+        }
+      ]
+    },
+    "authorAdvice" : "",
     "tags" : [],
     "createDate" : "",
     "updateDate" : ""
@@ -67,6 +79,7 @@
       "title" : "",
       "instructions" : "",
       "event" : "",
+      "time" : "",
       "feedbackHooks" : [
         {
           "id" : ""

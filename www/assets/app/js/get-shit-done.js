@@ -146,7 +146,7 @@ gsdk = {
     },
     
     checkScrollForTransparentNavbar: debounce(function() {	
-        	if($(document).scrollTop() > 260 ) {
+        	if($(document).scrollTop() > 50 ) {
                 if(transparent) {
                     transparent = false;
                     $('nav[role="navigation"]').removeClass('navbar-transparent');
@@ -243,7 +243,7 @@ gsdk = {
         		range: true,
         		min: 0,
         		max: 500,
-        		values: [ 75, 300 ],
+        		values: [ 75, 300 ]
         	});
         }
         if($('#refine-price-range').length != 0){
@@ -267,6 +267,35 @@ gsdk = {
         			range: "min",
         			animate: true
         	});
+        }
+        if($('#recipe-difficulty').length != 0){
+            $( "#recipe-difficulty" ).slider({
+                value: 2,
+                orientation: "horizontal",
+                range: "min",
+                min: 1,
+                max: 4,
+                animate: true,
+                slide: function(event, ui){
+                    switch(ui.value){
+                        case 1:
+                            $('#recipe_difficulty_label').html('Beginner');
+                            break;
+
+                        case 2:
+                            $('#recipe_difficulty_label').html('Novice');
+                            break;
+
+                        case 3:
+                            $('#recipe_difficulty_label').html('Advanced');
+                            break;
+
+                        case 4:
+                            $('#recipe_difficulty_label').html('Expert');
+                            break;
+                    }
+                }
+            });
         }
     },
     initVideoCards: function(){

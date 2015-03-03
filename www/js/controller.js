@@ -1,5 +1,36 @@
 ﻿
 angular.module('buildIoT')
+
+    /*==========================================================================
+     App Controller -- Top Level Controller.
+     ==========================================================================*/
+    .controller('AppController', ['$scope', '$http', function ($scope, $http) {
+
+        /* registers a script block to the DOM. Called in 1st level nested app controllers using $scope.$parent.loadScript()*/
+        $scope.loadScript = function(url, type, charset, override){
+            if(type === undefined) type = 'text/javascript';
+
+            if(url){
+                var script = document.querySelector("script[src*='" + url + "']");
+                if(!script || override){
+                    var heads = document.getElementsByTagName("head");
+                    if(heads && heads.length){
+                        var head = heads[0];
+                        if(head){
+                            script = document.createElement('script');
+                            script.setAttribute('src', url);
+                            script.setAttribute('type', type);
+                            if(charset) script.setAttribute('charset', charset);
+                            head.appendChild(script);
+                        }
+                    }
+                }
+                return script;
+            }
+        };
+    }])
+
+
     /*==========================================================================
      Home Controller
      ==========================================================================*/
@@ -42,19 +73,34 @@ angular.module('buildIoT')
         $scope.getRecipe = function(id){
         }
 
+        $scope.newRecipe = function(){
+            //load scripts needed for this section of view
+            $scope.isRecipe = false;
+            $scope.isRecipes = false;
+            $scope.isNewRecipe = true;
+            $scope.$parent.loadScript('assets/app/js/custom/can-recipes.js', 'text/javascript', null, true);
+        }
+
         $scope.saveRecipe = function(){
         }
 
         $scope.init = function () {
+
+            $scope.isNewRecipe = false;
+            $scope.isRecipe = false;
+            $scope.isRecipes = false;
+
             //check for route params
             if($routeParams.id !== null && $routeParams.id !== undefined){
                 //Get recipe from api (just for testing now)
+                $scope.isRecipe = true;
             }
             else{
                 //Get recipes from api (Just for testing purposes for now)
                 for (var i = 0; i < $scope.recipeCount; i++) {
                     $scope.recipes.push(i);
                 }
+                $scope.isRecipes = true;
             }
         }
 

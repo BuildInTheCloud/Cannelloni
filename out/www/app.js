@@ -25,11 +25,11 @@ System.registerModule("../../www/app.js", [], function(require) {
       var route = next.substring((index + 1), next.length);
       switch (route) {
         case 'home':
-          $rootScope.navbar_class = 'navbar navbar-default navbar-transparent navbar-fixed-top';
+          $rootScope.navbar_class = 'navbar navbar-ct-orange navbar-transparent navbar-fixed-top';
           $rootScope.navbar_role = 'navigation';
           break;
         default:
-          $rootScope.navbar_class = 'navbar navbar-default navbar-fixed-top';
+          $rootScope.navbar_class = 'navbar navbar-ct-orange navbar-fixed-top';
           $rootScope.navbar_role = '';
       }
     });
